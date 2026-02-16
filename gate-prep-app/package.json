@@ -1,0 +1,13 @@
+{
+  "name": "gate-prep-app",
+  "version": "1.0.0",
+  "description": "GATE Preparation Full Stack App",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "start": "concurrently --kill-others \"cd server && npm start\" \"cd client && npm run dev\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,magenta\"",
+    "dev": "concurrently --kill-others \"cd server && npm run dev\" \"cd client && npm run dev\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,magenta\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
